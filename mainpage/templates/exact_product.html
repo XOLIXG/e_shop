@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">Главное меню</a>
+<hr>
+Название:  {{ product.product_name }}<br>
+Описание: {{ product.product_info }}<br>
+Цена: {{ product.product_price }}<br>
+Количевство: {{ product.product_count }}<br>
+Категория: {{ product.product_category }}<br>
+<img src="{{ product.product_photo }}" alt="" height="120" width="200"><br>
+{{ product.product_date }}
+<hr>
+Цена: {{ product.product_price }}<br>
+Выберите количевство:
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="number" name="user_product_quantity">
+    <button>Заказать</button>
+</form>
+</body>
+</html>
